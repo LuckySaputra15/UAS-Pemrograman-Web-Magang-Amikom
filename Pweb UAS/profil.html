@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil Mahasiswa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+    }
+
+    .logo {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .title-bar {
+      padding: 15px 25px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .title-bar h4 {
+      color: #800080;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .help-link {
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .help-link:hover {
+      text-decoration: underline;
+    }
+
+    .sidebar {
+      background-color: #800080;
+      min-height: 100vh;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .sidebar a.active,
+    .sidebar a:hover {
+      background-color: #ffc107;
+      color: black;
+      font-weight: bold;
+    }
+
+    .sidebar a i {
+      margin-right: 10px;
+    }
+
+    .profile-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .profile-picture {
+      width: 100px;
+      height: 100px;
+      background-color: #800080;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+    }
+
+    .form-section {
+      background-color: #f8f8f8;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid #ccc;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input[readonly], select:disabled {
+      background-color: #e9ecef;
+    }
+
+    .line-purple {
+      width: 60px;
+      height: 5px;
+      background-color: #800080;
+      margin: 5px auto;
+    }
+
+    .line-yellow {
+      width: 40px;
+      height: 5px;
+      background-color: #ffc107;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Top -->
+  <div class="d-flex justify-content-between align-items-center title-bar">
+    <div class="d-flex align-items-center">
+      <img src="amikom.png" class="logo" alt="Logo Amikom">
+      <h4 class="fw-bold ms-3">Universitas Amikom Yogyakarta</h4>
+    </div>
+    <div>
+      <a href="#" class="help-link"><i class="bi bi-question-circle"></i> Help</a>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 col-lg-2 sidebar">
+        <a href="#" class="active"><i class="bi bi-person-circle"></i> Lihat Profil</a>
+        <a href="dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a>
+        <a href="magang.html"><i class="bi bi-file-earmark-text"></i> Pendaftaran Magang</a>
+        <a href="notif.html"><i class="bi bi-bell"></i> Notifikasi</a>
+        <a href="bimbingan.html"><i class="bi bi-link-45deg"></i> Bimbingan</a>
+        <a href="lapmagang.html"><i class="bi bi-journal-text"></i> Laporan Magang</a>
+        <a href="sertif.html"><i class="bi bi-printer"></i> Cetak Sertifikat</a>
+        <a href="logout.html"><i class="bi bi-box-arrow-left"></i> Logout</a>
+        <a href="pengaturan.html"><i class="bi bi-gear"></i> Pengaturan</a>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-9 col-lg-10 p-4">
+        <div class="profile-header">
+          <div class="profile-picture"></div>
+          <div class="line-purple"></div>
+          <div class="line-yellow"></div>
+        </div>
+
+        <div class="form-section">
+          <div class="title-bar">Data Profil Mahasiswa</div>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label>Nama Lengkap</label>
+                <input type="text" class="form-control" value="Lucky Saputra" readonly>
+              </div>
+              <div class="col-md-6">
+                <label>No Handphone</label>
+                <input type="text" class="form-control" value="08123456789" readonly>
+              </div>
+
+              <div class="col-md-6">
+                <label>NIM</label>
+                <input type="text" class="form-control" value="24.01.5157" readonly>
+              </div>
+              <div class="col-md-6">
+                <label>Tempat Tinggal</label>
+                <input type="text" class="form-control" value="Castilla Madrid" readonly>
+              </div>
+
+              <div class="col-md-6">
+                <label>Email</label>
+                <input type="email" class="form-control" value="luckysaputra@students.amikom.ac.id" readonly>
+              </div>
+              <div class="col-md-6">
+                <label>Kecamatan</label>
+                <select class="form-control" disabled>
+                  <option selected>Madrid</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label>Jenis Kelamin</label>
+                <select class="form-control" disabled>
+                  <option selected>Laki Laki</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label>Kabupaten</label>
+                <select class="form-control" disabled>
+                  <option selected>BARCELONA</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label>Tanggal Lahir</label>
+                <input type="text" class="form-control" value="15 Maret 2005" readonly>
+              </div>
+              <div class="col-md-6">
+                <label>Provinsi</label>
+                <select class="form-control" disabled>
+                  <option selected>Madrid</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label>Tempat Lahir</label>
+                <input type="text" class="form-control" value="Madrid" readonly>
+              </div>
+              <div class="col-md-6">
+                <label>Kode Pos</label>
+                <input type="text" class="form-control" value="15UCL" readonly>
+              </div>
+
+              <div class="col-md-6">
+                <label>Agama</label>
+                <select class="form-control" disabled>
+                  <option selected>Islam</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label>Ayah Kandung</label>
+                <input type="text" class="form-control" readonly>
+              </div>
+
+              <div class="col-md-6">
+                <label>Program Studi</label>
+                <input type="text" class="form-control" value="D3 Teknik Informatika" readonly>
+              </div>
+              <div class="col-md-6">
+                <label>Ibu Kandung</label>
+                <input type="text" class="form-control" readonly>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

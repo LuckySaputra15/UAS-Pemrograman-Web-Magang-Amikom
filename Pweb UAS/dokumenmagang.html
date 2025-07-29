@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Magang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #800080;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            padding: 20px;
+        }
+        
+        .container-custom {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .left-form {
+            flex: 1;
+            max-width: 300px;
+        }
+        
+        .left-form label {
+            font-weight: bold;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        
+        .left-form .form-control,
+        .left-form .form-select {
+            font-size: 13px;
+            height: 30px;
+            padding: 4px 8px;
+            margin-bottom: 5px;
+        }
+        
+        .upload-box {
+            flex: 1.5;
+            background-color: orange;
+            border-radius: 10px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .upload-header {
+            background-color: orange;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+        }
+        
+        .upload-content {
+            background-color: white;
+            color: black;
+            padding: 15px;
+            flex: 1;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            font-size: 14px;
+        }
+        
+        th {
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        
+        .btn-upload {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        
+        .btn-daftar {
+            background-color: orange;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 8px 30px;
+            border: none;
+            border-radius: 5px;
+            display: block;
+            margin: 20px auto 5px;
+        }
+        
+        .note {
+            text-align: center;
+            font-size: 12px;
+            font-style: italic;
+            margin-top: -5px;
+        }
+        
+        .header-text {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-text">Silahkan Isi Data Diri Anda Dibawah</div>
+
+    <div class="container-custom">
+
+        <!-- FORM KIRI -->
+        <div class="left-form">
+            <label>Nama Lengkap</label>
+            <input type="text" class="form-control" value="Lucky Saputra">
+
+            <label>NIM</label>
+            <input type="text" class="form-control" value="24.01.5157">
+
+            <label>Email</label>
+            <input type="email" class="form-control" value="luckysaputra@students.amikom.ac.id">
+
+            <label>Jenis Kelamin</label>
+            <select class="form-select">
+            <option selected>Laki Laki</option>
+            <option>Perempuan</option>
+        </select>
+
+            <label>Tanggal Lahir</label>
+            <input type="text" class="form-control" value="15 Maret 2006">
+
+            <label>Tempat Lahir</label>
+            <input type="text" class="form-control" value="Gunungkidul">
+
+            <label>Alamat Rumah</label>
+            <input type="text" class="form-control" value="Cepokojajar RT05 Sitimulyo Piyungan">
+
+            <label>No Telp</label>
+            <input type="text" class="form-control" value="082334535675">
+
+            <label>IPK</label>
+            <input type="text" class="form-control" value="3,35">
+
+            <label>Jumlah SKS yang dicapai</label>
+            <input type="text" class="form-control">
+
+            <label>Posisi Magang</label>
+            <select class="form-select">
+            <option selected>IT Operations</option>
+            <option>Software Developer</option>
+            <option>UI/UX Designer</option>
+        </select>
+        </div>
+
+        <!-- UPLOAD DOKUMEN -->
+        <div class="upload-box">
+            <div class="upload-header">Upload Dokumen</div>
+            <div class="upload-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dokumen</th>
+                            <th style="width:120px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kartu Tanda Mahasiswa</td>
+                            <td><button class="btn-upload">Pilih File</button></td>
+                        </tr>
+                        <tr>
+                            <td>Kartu Tanda Penduduk</td>
+                            <td><button class="btn-upload">Pilih File</button></td>
+                        </tr>
+                        <tr>
+                            <td>Nilai IP Kamulatif</td>
+                            <td><button class="btn-upload">Pilih File</button></td>
+                        </tr>
+                        <tr>
+                            <td>Surat Permohonan Magang dari Universitas</td>
+                            <td><button class="btn-upload">Pilih File</button></td>
+                        </tr>
+                        <tr>
+                            <td>Surat sudah Vaksin Covid-19 Tahap 2-3</td>
+                            <td><button class="btn-upload">Pilih File</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn-daftar">Mendaftar</button>
+    <div class="note">Tunggu notifikasi pesan dari perusahaan di email anda</div>
+
+</body>
+
+</html>

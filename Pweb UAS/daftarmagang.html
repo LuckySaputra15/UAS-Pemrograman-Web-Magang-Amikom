@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PT. Pertamina</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            gap: 20px;
+        }
+        
+        .left {
+            width: 40%;
+            padding-top: 20px;
+        }
+        
+        .right {
+            width: 60%;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .lines {
+            height: 10px;
+            margin-bottom: 5px;
+        }
+        
+        .purple {
+            background-color: purple;
+            width: 80%;
+        }
+        
+        .orange {
+            background-color: orange;
+            width: 75%;
+        }
+        
+        .short {
+            width: 50%;
+        }
+        
+        .dots {
+            font-size: 24px;
+            margin: 20px 0;
+            color: black;
+        }
+        
+        .small {
+            height: 10px;
+            margin-bottom: 5px;
+        }
+        
+        .small.purple {
+            width: 50%;
+            background-color: purple;
+        }
+        
+        .small.orange {
+            width: 40%;
+            background-color: orange;
+        }
+        
+        .location {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            gap: 10px;
+        }
+        
+        .location-text .small {
+            margin: 3px 0;
+        }
+        
+        .btn-daftar {
+            background-color: orange;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .map {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h1><strong>PT. Pertamina</strong></h1>
+            <p>Deskripsi PT. Pertamina</p>
+
+            <div class="lines purple"></div>
+            <div class="lines orange"></div>
+            <div class="lines orange short"></div>
+
+            <div class="dots">• • • •</div>
+
+            <div class="small purple"></div>
+            <div class="small orange"></div>
+
+            <div class="location">
+                <i class="bi bi-geo-alt"></i>
+                <div class="location-text">
+                    <div class="small purple"></div>
+                    <div class="small orange"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <a href="dokumenmagang.html" class="text-decoration-none">
+                    <button class="btn-daftar">Daftar</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2023950.3478865873!2d108.12538146972658!3d-7.786853502144712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a582ff50bc0c3%3A0xe47cd522ffd97a15!2sPT.%20Pertamina%20(Branch%20Office)!5e0!3m2!1sen!2sid!4v1751439703796!5m2!1sen!2sid"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+        </div>
+    </div>
+
+    <!-- Google Maps JavaScript API -->
+    <script src="https://maps.app.goo.gl/xePrABrMLEdGLAqV9" async defer>
+    </script>
+
+    <script>
+        function initMap() {
+            const lokasi = {
+                lat: -6.1754,
+                lng: 106.8272
+            }; // Koordinat Jakarta / Pertamina
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: lokasi,
+            });
+            new google.maps.Marker({
+                position: lokasi,
+                map,
+                title: "PT. Pertamina",
+            });
+        }
+    </script>
+</body>
+
+</html>
